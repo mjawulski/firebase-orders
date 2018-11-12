@@ -15,14 +15,22 @@ import {
 } from '@angular/material';
 import { OrdersListComponent } from './orders-list/orders-list.component';
 import { AddNewOrderComponent } from './add-new-order/add-new-order.component';
+import { AddNewOrderSecureComponent } from './add-new-order-secure/add-new-order-secure.component';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
-  declarations: [AppComponent, OrdersListComponent, AddNewOrderComponent],
+  declarations: [
+    AppComponent,
+    OrdersListComponent,
+    AddNewOrderComponent,
+    AddNewOrderSecureComponent
+  ],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
