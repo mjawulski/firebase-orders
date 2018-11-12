@@ -14,9 +14,10 @@ import {
   MatInputModule
 } from '@angular/material';
 import { OrdersListComponent } from './orders-list/orders-list.component';
+import { AddNewOrderComponent } from './add-new-order/add-new-order.component';
 
 @NgModule({
-  declarations: [AppComponent, OrdersListComponent],
+  declarations: [AppComponent, OrdersListComponent, AddNewOrderComponent],
   imports: [
     BrowserModule,
     NoopAnimationsModule,
