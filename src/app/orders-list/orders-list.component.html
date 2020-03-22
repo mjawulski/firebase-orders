@@ -1,0 +1,18 @@
+<mat-card *ngFor="let order of orders | async" class="order-card">
+  <mat-card-header>
+    <mat-card-title>{{ order.name }}</mat-card-title>
+    <mat-card-subtitle>{{ order.status }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="setStatus(order, 'doing')"
+    >
+      Doing
+    </button>
+    <button mat-raised-button color="accent" (click)="setStatus(order, 'done')">
+      Done
+    </button>
+  </mat-card-actions>
+</mat-card>
